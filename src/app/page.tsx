@@ -14,6 +14,8 @@ import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutl
 import ViewQuiltOutlinedIcon from '@mui/icons-material/ViewQuiltOutlined';
 import HandshakeOutlinedIcon from '@mui/icons-material/HandshakeOutlined';
 import MailOutlinedIcon from '@mui/icons-material/MailOutlined';
+import Typewriter from 'typewriter-effect'; 
+import { Block } from '@mui/icons-material';
 
 
 export default function Home() {
@@ -28,9 +30,10 @@ export default function Home() {
     textTransform: 'none',
   };
 
+
   return (
     <main>
-      <Container id="infobar" sx={{display: 'flex', width: '326px', height: '960px', bgcolor: '#040B14', position: 'fixed', flexWrap: "wrap"}} >
+      <Container id="infobar" sx={{display: 'flex', width: '326px',height: '100%', bgcolor: '#040B14', position: 'fixed', flexWrap: "wrap"}} >
         <Container id="profile-pic"  sx={{height: 0}} >
 
           <Box id="portfolioBar" sx={{display: 'flex', ml: "-21%", width: 326, height: 40, backgroundColor: "#0a6cc2", justifyContent: "center"}} >
@@ -53,8 +56,8 @@ export default function Home() {
           <Box sx={{width: 40, height: 40, backgroundColor: "#383838", borderRadius: '100px',ml: "auto",mr: "auto" ,mt: '86px', display:"flex", justifyContent: "center"}} ><YouTubeIcon sx={{fontSize: "30px", alignSelf: "center", color: "white"}} /></Box>
         </Container>
         <Container id='about tabs' sx={{display: 'flex', mt: "-15rem", ml: "-20px", flexDirection: 'column'}}>
-        <Button href='#gold' sx={tabStyle} ><MailOutlinedIcon sx={{fontSize: "30px", alignSelf: "left", color: "#2A82D4", mr: 1}} /> Home</Button>
-        <Button sx={tabStyle} ><PersonOutlineOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> About</Button>
+        <Button href='#home' sx={tabStyle} ><MailOutlinedIcon sx={{fontSize: "30px", alignSelf: "left", color: "#2A82D4", mr: 1}} /> Home</Button>
+        <Button href='#about' sx={tabStyle} ><PersonOutlineOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> About</Button>
         <Button sx={tabStyle} ><InsertDriveFileOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> Resume</Button>
         <Button sx={tabStyle} ><ViewQuiltOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> Portfolio</Button>
         <Button sx={tabStyle} ><HandshakeOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> Services</Button>
@@ -62,26 +65,33 @@ export default function Home() {
         </Container>
       </Container>
       <Container sx={{display: 'flex', flexDirection: "column", ml: "301px"}} >
-      <Box sx={{display: 'flex', height: 960, width: 1578}} ><img
+        <Typography id="home" />
+      <Box sx={{display: 'block',height: 960, width: 1578, position: 'fixed', zIndex: '0'}} ><img
           src="/city-3840x2160.jpg"/></Box>
-      <Box sx={{display: 'flex', bgcolor: "green", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "blue", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "gray", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "purple", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "crimson", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "violet", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "beige", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "lavender", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "skyblue", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "lime", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "lightblue", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "darkred", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "turquoise", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "salmon", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "yellow", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "pink", height: 100, width: 100}} ></Box>
-      <Box sx={{display: 'flex', bgcolor: "gold", height: 100, width: 100}} ></Box>
-      <Box id="gold" sx={{display: 'flex', bgcolor: "gold", height: 100, width: 100}} ></Box>
+          <Typography sx={{display: 'flex',position: 'absolute',textAlign: 'center', top: '23rem', left: '50rem', color: 'white',fontFamily: 'monospace', fontSize: '4rem', fontWeight: '800'}} >
+            Elias Wikman</Typography>
+            <Typography sx={{display: 'block', zIndex: 1,mt: '27rem', ml: '29.5rem', color: 'white',fontFamily: 'monospace', fontSize: '4rem', fontWeight: '800'}} >
+              <Typewriter 
+                onInit={(typewriter) => { 
+                typewriter.typeString("i'm a developer") 
+
+                .pauseFor(2500) 
+                .deleteAll() 
+                typewriter.typeString('i studied in Optima') 
+                .pauseFor(2500)
+                .deleteAll() 
+                .start(); 
+              }} 
+            /> 
+          </Typography>
+      <Box sx={{display: 'block', zIndex: '1',bgcolor: "white", height: 580, maxWidth: 1700, minWidth: 1578,mt: '31%' }} >
+        <Typography id="about" sx={{display: 'flex',position: 'absolute',textAlign: 'center',mt: '5rem',ml: '130px', color: 'black',fontSize: '2rem', fontWeight: '400'}} >
+        About
+        </Typography>
+        <Typography  sx={{display: 'flex',flexWrap: 'wrap' ,position: 'absolute',textAlign: 'center',mt: '9rem',ml: '130px', color: 'black',fontSize: '1.2rem', fontWeight: '400'}} >
+        I was interested in programing when i started with making my own content for video games when i was about 14 years old
+        </Typography>
+      </Box>
       </Container>
     </main>
   )
