@@ -60,7 +60,7 @@ export default function Home() {
             <Button href='#about' sx={tabStyle} ><PersonOutlineOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> About</Button>
             <Button href='#resume' sx={tabStyle} ><InsertDriveFileOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> Resume</Button>
             <Button sx={tabStyle} ><HandshakeOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} /> Services</Button>
-            <Button sx={tabStyle} ><MailOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} />Contact</Button>
+            <Button href='#contact' sx={tabStyle} ><MailOutlinedIcon sx={{fontSize: "30px", alignSelf: "center", color: "#2A82D4", mr: 1}} />Contact</Button>
           </Container>
         </Container>
       </Container>
@@ -89,17 +89,19 @@ export default function Home() {
               }} 
             /> 
           </Typography>
-      <Box sx={{display: 'block', position: 'relative' ,zIndex: '1',bgcolor: "white", pr: '137%',height: 580,mt: '80%', maxWidth: '30%'}} >
+      <Box sx={{display: 'block', position: 'relative' ,zIndex: '1',bgcolor: "white", pr: '137%',height: 350,mt: '80%', maxWidth: '30%'}} >
         <Typography id="about" sx={{display: 'flex',scrollMarginTop: '350px',position: 'absolute',textAlign: 'center',mt: '5rem',ml: '130px', color: 'black',fontSize: '2rem', fontWeight: '400'}} >
         About
         </Typography>
-        <Typography  sx={{display: 'block',flexWrap: 'wrap' ,position: 'absolute',textAlign: 'center',mt: '9rem',ml: '130px', color: 'black',fontSize: '1.2rem', fontWeight: '400'}} >
-        I was interested in programing when i started with making my own content for video games when i was about 14 years old.
+        <Typography  sx={{display: 'block',flexWrap: 'wrap' ,position: 'absolute',textAlign: 'left ',mt: '9rem',ml: '130px', color: 'black',fontSize: '1.2rem', fontWeight: '400'}} >
+        I was interested in programing when i started with making my own content for video games when i was about 14 years old. <br />After i finished highschool at 16 i started in the contstruction industry because i wanted to try something new for about half a year <br />
+        until i noticed that was the wrong move. <br />
+        So I finally decided I wanted to try coding for real so i switched to Information and Communication Technology (ICT) which was a bumpy <br /> road here and there but I finished it in the end.
         </Typography>
       </Box>
 
       <Box sx={{ display: 'block', position: 'relative', zIndex: '1', bgcolor: "#F9F3ED", pr: '137%', height: 'auto', mt: '0%', maxWidth: '30%', pb: '100px' }}>
-          <Typography id="resume" sx={{ display: 'flex', position: 'absolute', textAlign: 'center', mt: '5rem', ml: '130px', color: 'black', fontSize: '2rem', fontWeight: '400' }}>
+          <Typography id="resume" sx={{ display: 'flex', scrollMarginTop: '350px', position: 'absolute', textAlign: 'center', mt: '5rem', ml: '130px', color: 'black', fontSize: '2rem', fontWeight: '400' }}>
             Resume
           </Typography>
 
@@ -107,7 +109,7 @@ export default function Home() {
             <Typography component='div' sx={{ mb: 2,  mr: '40px'}}>
               <strong>Summary</strong>
               <Typography sx={{ mb: 2 }}>
-                Experienced software developer with a passion for creating interactive applications and services.
+                Software developer with a passion for creating interactive applications and services.
               </Typography>
             </Typography>
 
@@ -116,7 +118,7 @@ export default function Home() {
               <Typography sx={{mb: 2, }}>
                 JavaScript/
                 Typescript, React, Node.js<br />
-                HTML, CSS, SASS<br />
+                HTML, CSS<br />
                 Git, GitHub<br />
               </Typography>
             </Typography>
@@ -127,6 +129,21 @@ export default function Home() {
                 Developed web applications using React and Node.js.<br />
                 Designing with Material UI.<br />
                 Integrating third-party APIs to enhance application functionality.
+              </Typography>
+            </Typography>
+          </Box>
+        </Box>
+
+        <Box sx={{ display: 'block', position: 'relative', zIndex: '1', bgcolor: "#303030", pr: '137%', height: 'auto', mt: '0%', maxWidth: '30%', pb: '50px' }}>
+          <Typography id="contact" sx={{ display: 'flex', position: 'absolute', textAlign: 'center', mt: '5rem', ml: '130px', color: 'white', fontSize: '2rem', fontWeight: '400' }}>
+            Contact
+          </Typography>
+
+          <Box sx={{ display: 'flex',mt: '9rem', ml: '130px', color: 'white', fontSize: '1.2rem', fontWeight: '400'}}>
+            <Typography component='div' sx={{ mb: 2,  mr: '40px', fontSize: '1.3rem'}}>
+              <strong>Phone:</strong>
+              <Typography sx={{ mb: 2, fontSize: '1.2rem' }}>
+                +358400849699
               </Typography>
             </Typography>
           </Box>
